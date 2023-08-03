@@ -2,15 +2,15 @@
 name = "hexlet-flask-example"
 version = "0.1.0"
 description = ""
-authors = ["Anton Tyurin <AntonTyurin87@gmail.com>"]
-readme = "README.md"
-packages = [{include = "hexlet_flask_example"}]
+authors = ["AntonTyurin87 <AntonTyurin87gmail.com>"]
 
 [tool.poetry.dependencies]
-python = "^3.8"
-flask = "^2.3.2"
+python = "^3.10"
+Flask = "^2.3.2"
+gunicorn = "^21.2.0"
 
+[tool.poetry.dev-dependencies]
 
 [build-system]
-requires = ["poetry-core"]
+requires = ["poetry-core>=1.0.0"]
 build-backend = "poetry.core.masonry.api"

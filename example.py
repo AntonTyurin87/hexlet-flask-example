@@ -1,8 +1,17 @@
-from flask import Flask
+#from flask import Flask
 
-app = Flask(__name__)
+#app = Flask(__name__)
 
 
+def app(environ, start_response):
+    data = b"Hello, World!\n"
+    start_response("200 OK", [
+        ("Content-Type", "text/plain"),
+        ("Content-Length", str(len(data)))
+    ])
+    return iter([data])
+
+'''
 @app.route('/')
 def index():
     return 'Hello, World!'
@@ -16,3 +25,4 @@ def users_get():
 @app.post('/users')
 def users_post():
     return 'POST /users'
+'''
